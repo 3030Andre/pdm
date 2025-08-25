@@ -1,6 +1,7 @@
 package com.example.app;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,26 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("ciclo_vida", "onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("ciclo_vida" ,"onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause( );
+        Log.d("ciclo_vida" ,"onPause");
+
+
+
     }
 }

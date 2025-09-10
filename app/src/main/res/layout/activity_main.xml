@@ -11,6 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -18,47 +19,39 @@
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <EditText
-        android:id="@+id/edmin"
+        android:id="@+id/editTextText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="text"
+        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toStartOf="@+id/edmax"
+        app:layout_constraintEnd_toStartOf="@+id/editTextText2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edmax"
+        android:id="@+id/editTextText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="text"
+        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/edmin"
-        app:layout_constraintTop_toTopOf="@+id/edmin" />
+        app:layout_constraintStart_toEndOf="@+id/editTextText"
+        app:layout_constraintTop_toTopOf="@+id/editTextText" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="sortear"
+        android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edmin" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aplicativo sorteio"
-        app:layout_constraintBottom_toTopOf="@+id/edmin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

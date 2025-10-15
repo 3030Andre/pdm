@@ -27,16 +27,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        listview = findViewById(R.id.editTextText);
+        listview = findViewById(R.id.listView2);
         nomes = new ArrayList<String>();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
           android.R.layout.simple_list_item_1, nomes);
-        ListView.setAdapter(adapter);
-        buttonSalvar.setOnClickListener(view v -> {
-            nomes.add(editText.getText().toString());
-            adapter.notify();
-            ContactsContract.DataSetChanged();
-        })
+        listview.setAdapter(adapter);
+
+
+        button = findViewById(R.id.button);
+        button.setOnClickListener((v ->{
+            editText = findViewById(R.id.editTextText);
+            String nome = editText.getText().toString();
+            nomes.add(nome);
+            adapter.notifyDataSetChanged();
+            editText.setText("");
+        } ));
+        listview.setOnItemClickListener((parent, view, position, id) ->{
+            nomes.remove(position);
+            adapter.notifyDataSetChanged();
+        } );
+
 
     }
 }
